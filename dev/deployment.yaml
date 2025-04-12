@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tridiondashboard
+spec:
+  selector:
+    matchLabels:
+      app: tridiondashboard
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: tridiondashboard
+    spec:
+      containers:
+      - name: tridiondashboard
+        image: avmgan/tridiondashboard:1.0
+        ports:
+        - containerPort: 5002

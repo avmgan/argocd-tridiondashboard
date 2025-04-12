@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tridiondashboard-service
+spec:
+  selector:
+    app: tridiondashboard
+  ports:
+  - port: 5002
+    protocol: TCP
+    targetPort: 5002 
